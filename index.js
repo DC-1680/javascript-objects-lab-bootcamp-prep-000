@@ -17,14 +17,14 @@ function destructivelyUpdateObjectWithKeyAndValue(obj, key, value) {
 
 var obj3 = {prop3: '3'}
 var newObj = Object.assign({}, obj3);
+
 function deleteFromObjectByKey(object, key) {
-  delete newObj.prop3;
-  return obj3;
+  return Object.assign(obj, {[prop]: ""});
 }
 
 var obj4 = {'prop4': "4", 'prop5': "5"}
 
-function destructivelyDeleteFromObjectKey(obj, key) {
-  return Object.assign(obj, {[key]:value});
+function destructivelyDeleteFromObjectKey(object, key) {
+  delete object.key;
+  return object;
 }
-destructivelyDeleteFromObjectKey(obj, 'prop')
